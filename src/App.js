@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import News from "./components/News";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 export default class App extends Component {
+  apiKey = process.env.REACT_APP_NEWS_API;
+
   render() {
     return (
       <div>
@@ -16,6 +18,7 @@ export default class App extends Component {
               element={
                 <News
                   key="general"
+                  apiKey={this.apiKey}
                   pageSize={8}
                   category={"general"}
                   country={"in"}
@@ -28,6 +31,7 @@ export default class App extends Component {
               element={
                 <News
                   key="business"
+                  apiKey={this.apiKey}
                   pageSize={8}
                   category={"business"}
                   country={"in"}
@@ -40,6 +44,7 @@ export default class App extends Component {
               element={
                 <News
                   key="entertainment"
+                  apiKey={this.apiKey}
                   pageSize={8}
                   category={"entertainment"}
                   country={"in"}
@@ -52,6 +57,7 @@ export default class App extends Component {
               element={
                 <News
                   key="health"
+                  apiKey={this.apiKey}
                   pageSize={8}
                   category={"health"}
                   country={"in"}
@@ -64,6 +70,7 @@ export default class App extends Component {
               element={
                 <News
                   key="science"
+                  apiKey={this.apiKey}
                   pageSize={8}
                   category={"science"}
                   country={"in"}
@@ -76,6 +83,7 @@ export default class App extends Component {
               element={
                 <News
                   key="sports"
+                  apiKey={this.apiKey}
                   pageSize={8}
                   category={"sports"}
                   country={"in"}
@@ -88,6 +96,7 @@ export default class App extends Component {
               element={
                 <News
                   key="tech"
+                  apiKey={this.apiKey}
                   pageSize={8}
                   category={"technology"}
                   country={"in"}
